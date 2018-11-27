@@ -1,6 +1,8 @@
 package com.zhb.file.proto.service.impl;
 
 import com.zhb.file.proto.service.FileProtoService;
+import com.zhb.forever.framework.proto.ProtoResult;
+import com.zhb.forever.framework.proto.RemoteCallRs;
 
 /**
 *@author   zhanghb<a href="mailto:zhb20111503@126.com">zhanghb</a>
@@ -10,8 +12,11 @@ import com.zhb.file.proto.service.FileProtoService;
 public class FileProtoServiceImpl implements FileProtoService {
 
     @Override
-    public String getFileName() {
-        return "hello world";
+    public ProtoResult getFileNameById(String id) {
+        ProtoResult protoResult = new ProtoResult();
+        protoResult.setCallResult(RemoteCallRs.CALLRESULT_SUCCESS);
+        protoResult.setProtoBytes("hello world".getBytes());
+        return protoResult;
     }
 
 }

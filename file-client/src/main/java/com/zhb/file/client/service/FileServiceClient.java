@@ -8,7 +8,7 @@ package com.zhb.file.client.service;
 public interface FileServiceClient {
     
     
-    String getFileName();
+    String getFileNameById(String id);
 
 }
 

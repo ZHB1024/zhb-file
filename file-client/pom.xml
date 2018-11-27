@@ -47,13 +47,6 @@
   
   <dependencies>
   
-  	<!-- zhb-framework -->
-		<dependency>
-			<groupId>com.zhb.forever</groupId>
-			<artifactId>zhb-framework</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-  	
   	<!-- zhb-file -->
 		<dependency>
 			<groupId>com.zhb.file</groupId>
@@ -61,12 +54,6 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		
-  	<!-- springmvc-->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-web</artifactId>
-			<version>${spring.version}</version>
-		</dependency>
   </dependencies>
   
 
