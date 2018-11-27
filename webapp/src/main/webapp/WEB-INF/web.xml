@@ -3,7 +3,7 @@
 	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	id="WebApp_ID" version="2.5">
-	<display-name>zhb_remote</display-name>
+	<display-name>zhb_file</display-name>
 	
     <!-- 添加springMVC的配置 -->
     <servlet>
@@ -14,7 +14,7 @@
     
     <servlet-mapping>
         <servlet-name>springMVC</servlet-name>
-        <url-pattern>/testRemoting/*</url-pattern>
+        <url-pattern>/remoting/*</url-pattern>
     </servlet-mapping>
     
     <session-config>

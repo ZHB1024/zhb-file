@@ -16,12 +16,15 @@
     http://www.springframework.org/schema/mvc   
     http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     
-    <bean name="remote" class="com.zhb.remote.impl.RemoteServiceImpl" />  
-    <bean name="/remoteservice"  
+    <!-- 远程调用服务 -->
+    <bean name="/file/FileProtoService"  
             class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">  
-            <property name="service" ref="remote" />  
-            <property name="serviceInterface" value="com.zhb.remote.IRemoteService" />  
-    </bean> 
+            <property name="service" ref="fileProtoService" />  
+            <property name="serviceInterface" value="com.zhb.file.proto.service.FileProtoService" />  
+    </bean>
+    
+    <bean name="fileProtoService" class="com.zhb.file.proto.service.impl.FileProtoServiceImpl" />  
+     
         
     
 </beans>

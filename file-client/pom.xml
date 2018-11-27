@@ -16,12 +16,48 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   
+  <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <tasks>
+                                <copy todir="target/classes/com/zhb/" preservelastmodified="true">
+                                    <!-- <fileset dir="../zhb/target/classes/com/zhb/">
+                                        <include name="**/proto/*.class" />
+                                    </fileset> -->
+                                    <fileset dir="../file/target/classes/com/zhb/">
+                                        <include name="**/service/*FileProtoService.class" />
+                                    </fileset>
+                                </copy>
+                                
+                            </tasks>
+                        </configuration>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+  
   <dependencies>
-  	
+  
   	<!-- zhb-framework -->
 		<dependency>
 			<groupId>com.zhb.forever</groupId>
 			<artifactId>zhb-framework</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+  	
+  	<!-- zhb-file -->
+		<dependency>
+			<groupId>com.zhb.file</groupId>
+			<artifactId>zhb-file</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		

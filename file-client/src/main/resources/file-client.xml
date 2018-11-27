@@ -9,11 +9,18 @@
     http://www.springframework.org/schema/context/spring-context.xsd   
     http://www.springframework.org/schema/mvc   
     http://www.springframework.org/schema/mvc/spring-mvc.xsd">
-
-<bean id="iRemoteTest"  
+    
+    
+    <bean id="fileServiceClient" class="com.zhb.file.client.service.impl.FileServiceClientImpl">
+        <property name="fileProtoService" ref="fileProtoService" />
+    </bean>
+    
+    
+    <bean id="fileProtoService"  
         class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">  
-        <property name="serviceUrl" value="http://localhost:80/testRemoting/remoteservice" />  
-        <property name="serviceInterface" value="com.zhb.remote.client.IRemoteService" />  
-</bean>  
+        <property name="serviceUrl" value="http://localhost:80/remoting/file/FileProtoService" />  
+        <property name="serviceInterface" value="com.zhb.file.proto.service.FileProtoService" />  
+	</bean> 
+
 
 </beans>
