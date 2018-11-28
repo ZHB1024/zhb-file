@@ -26,9 +26,9 @@
                         <configuration>
                             <tasks>
                                 <copy todir="target/classes/com/zhb/" preservelastmodified="true">
-                                    <!-- <fileset dir="../zhb/target/classes/com/zhb/">
-                                        <include name="**/proto/*.class" />
-                                    </fileset> -->
+                                    <fileset dir="../file/target/classes/com/zhb/">
+                                        <include name="**/proto/*Protos.class" />
+                                    </fileset>
                                     <fileset dir="../file/target/classes/com/zhb/">
                                         <include name="**/service/*FileProtoService.class" />
                                     </fileset>

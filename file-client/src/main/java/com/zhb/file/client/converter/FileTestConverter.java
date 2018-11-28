@@ -1,5 +1,7 @@
 package com.zhb.file.client.converter;
 
+import java.io.UnsupportedEncodingException;
+
 import com.zhb.forever.framework.proto.ProtoResult;
 import com.zhb.forever.framework.proto.support.ProtoConverter;
 
@@ -11,7 +13,7 @@ import com.zhb.forever.framework.proto.support.ProtoConverter;
 public class FileTestConverter extends ProtoConverter<String> {
 
     @Override
-    public String converFromProto(ProtoResult paramProtoResult) throws Exception{
+    public String converFromProto(ProtoResult paramProtoResult) throws UnsupportedEncodingException {
         String result = new String(paramProtoResult.getProtoBytes(),"utf-8");
         return result;
     }

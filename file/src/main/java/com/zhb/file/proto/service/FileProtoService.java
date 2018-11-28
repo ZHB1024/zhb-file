@@ -10,6 +10,8 @@ import com.zhb.forever.framework.proto.ProtoResult;
 public interface FileProtoService {
     
     ProtoResult getFileNameById(String id);
+    
+    ProtoResult getKeyValue(String key,String value);
 
 }
 
