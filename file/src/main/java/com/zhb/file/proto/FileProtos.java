@@ -3,6 +3,12 @@
 
 package com.zhb.file.proto;
 
+/**protobuf
+ **简便、高校、兼容性
+ **用于存储结构化数据以及rpc数据交换
+ **二进制数据传输格式
+ **varint编码后的消息的内容小，适于网络传输
+*/
 public final class FileProtos {
   private FileProtos() {}
   public static void registerAllExtensions(
